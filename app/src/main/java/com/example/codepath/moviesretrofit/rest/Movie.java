@@ -1,4 +1,4 @@
-package com.example.codepath.moviesretrofit.data;
+package com.example.codepath.moviesretrofit.rest;
 
 import android.os.Parcel;
 import android.os.Parcelable;

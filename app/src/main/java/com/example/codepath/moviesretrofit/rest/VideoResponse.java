@@ -1,6 +1,5 @@
 package com.example.codepath.moviesretrofit.rest;
 
-import com.example.codepath.moviesretrofit.data.Video;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;

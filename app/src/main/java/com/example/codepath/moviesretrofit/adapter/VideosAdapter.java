@@ -6,22 +6,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.RatingBar;
-import android.widget.TextView;
 
 import com.example.codepath.moviesretrofit.R;
 import com.example.codepath.moviesretrofit.activities.MovieDetailActivity;
-import com.example.codepath.moviesretrofit.data.Movie;
-import com.example.codepath.moviesretrofit.data.Video;
+import com.example.codepath.moviesretrofit.rest.Video;
 import com.google.android.youtube.player.YouTubePlayerView;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import butterknife.Bind;
-import butterknife.ButterKnife;
 
 /**
  * Created by gretel on 9/6/17.

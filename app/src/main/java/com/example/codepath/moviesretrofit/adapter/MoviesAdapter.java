@@ -12,13 +12,14 @@ import android.widget.TextView;
 
 import com.example.codepath.moviesretrofit.R;
 import com.example.codepath.moviesretrofit.activities.MovieDetailActivity;
-import com.example.codepath.moviesretrofit.data.Movie;
+import com.example.codepath.moviesretrofit.rest.Movie;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.codepath.moviesretrofit.data.Movie.MovieType.voteAverage;
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 /**
  * Created by gretel on 9/6/17.
@@ -33,6 +34,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
     public MoviesAdapter(Context context) {
         this.mContext = context;
         this.mInflater = LayoutInflater.from(context);
+
     }
 
     @Override
@@ -91,20 +93,24 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
     }
 
     public static class MovieViewHolder extends RecyclerView.ViewHolder {
-        public ImageView imageView;
-        public TextView voteAverage;
-        public RatingBar ratingBar;
-      //  public TextView popularity;
-        public TextView title;
+
+        @Bind(R.id.tv_item_VoteAverage)
+        TextView voteAverage;
+
+        @Bind(R.id.iv_item_poster)
+        ImageView imageView;
+
+        @Bind(R.id.tv_item_Title)
+        TextView title;
+
+        @Bind(R.id.item_ratingBar)
+        RatingBar ratingBar;
+
 
         public MovieViewHolder(View itemView) {
             super(itemView);
+            ButterKnife.bind(this, itemView);
 
-            voteAverage = (TextView) itemView.findViewById(R.id.tvVoteAverage);
-            imageView = (ImageView) itemView.findViewById(R.id.imageView);
-           // popularity = (TextView) itemView.findViewById(R.id.tvPopularity);
-            title = (TextView) itemView.findViewById(R.id.tvTitle);
-            ratingBar = (RatingBar) itemView.findViewById(R.id.ratingBar);
         }
     }
 

@@ -2,19 +2,23 @@ package com.example.codepath.moviesretrofit.rest;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by gretel on 9/6/17.
+ * Created by gretel on 9/8/17.
  */
 
-public class MovieResponse {
+public class ReviewResponse {
+
+    @SerializedName("id")
+    int id;
 
     @SerializedName("page")
     int page;
 
     @SerializedName("results")
-    List<Movie> movies;
+    List<Review> reviews;
 
     @SerializedName("total_pages")
     int totalPages;
@@ -22,12 +26,18 @@ public class MovieResponse {
     @SerializedName("total_results")
     int totalResults;
 
+    public int getId() {
+        return id;
+    }
+
     public int getPage() {
         return page;
     }
 
-    public List<Movie> getMovies() {
-        return movies;
+    public List<Review> getReviews() {
+        if (reviews == null)
+            return Collections.emptyList();
+        return reviews;
     }
 
     public int getTotalPages() {
@@ -36,13 +46,5 @@ public class MovieResponse {
 
     public int getTotalResults() {
         return totalResults;
-    }
-
-    public static class MovieResult {
-        private List<Movie> results;
-
-        public List<Movie> getResults() {
-            return results;
-        }
     }
 }

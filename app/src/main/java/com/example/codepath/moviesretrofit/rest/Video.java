@@ -1,4 +1,4 @@
-package com.example.codepath.moviesretrofit.data;
+package com.example.codepath.moviesretrofit.rest;
 
 import android.net.Uri;
 import android.os.Parcel;
@@ -7,11 +7,6 @@ import android.os.Parcelable;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
-
-import static android.R.attr.key;
-import static android.R.attr.name;
-import static android.R.attr.resource;
-import static android.R.attr.type;
 
 /**
  * Created by gretel on 9/6/17.
@@ -155,6 +150,10 @@ public class Video implements Parcelable {
         public long id;
         @SerializedName("results")
         private List<Video> results;
+
+        public List<Video> getResults() {
+            return results;
+        }
 
     }
 
